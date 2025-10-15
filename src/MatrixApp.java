@@ -46,6 +46,30 @@ public class MatrixApp {
         return sum;
     }
 
+    public static int[][] matrixMultiplication(int[][] matrixA, int[][] matrixB) {
+        int aRows = matrixA.length;
+        int aCols = matrixA[0].length;
+        int bRows = matrixB.length;
+        int bCols = matrixB[0].length;
+
+        if (aCols != bRows) {
+            throw new IllegalArgumentException("Matrix dimensions are not compatible for multiplication!");
+        }
+
+        int[][] result = new int[aRows][bCols];
+
+        for (int i = 0; i < aRows; i++) {
+            for (int j = 0; j < bCols; j++) {
+                for (int k = 0; k < aCols; k++) {
+
+                    result[i][j] += matrixA[i][k] * matrixB[k][j];
+
+                }
+            }
+        }
+        return result;
+    }
+
     public static void printArray(int[] array) {
         for (int val : array) {
             System.out.print(val + " ");
