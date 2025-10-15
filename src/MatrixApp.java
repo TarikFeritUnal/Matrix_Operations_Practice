@@ -68,6 +68,13 @@ public class MatrixApp {
             }
         }
         return result;
+
+      // [EN]
+        // Time Complexity: O(n^3) – three nested loops (for i, j, k) make the algorithm cubic in matrix size.
+        // Space Complexity: O(n^2) – the result matrix requires quadratic additional space.
+      // [TR]
+        // Zaman Karmaşıklığı: O(n^3) – üç iç içe döngü (i, j, k) algoritmayı matris boyutuna göre kübik yapar.
+        // Uzay (Bellek) Karmaşıklığı: O(n^2) – sonuç matrisi kare (n^2) kadar ek bellek kullanır.
     }
 
     public static void printArray(int[] array) {
